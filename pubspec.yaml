@@ -1,0 +1,9 @@
+name: tapo_calendar_example
+description: A sample Polymer application
+dependencies:
+    polymer: 0.9.1
+    tapo_calendar:
+      path: ../tapo_calendar
+transformers:
+- polymer:
+    entry_points: web/tapo_calendar_example.html
