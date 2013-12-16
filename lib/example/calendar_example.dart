@@ -7,5 +7,9 @@ import 'package:tapo_calendar/calendarview/calendarview.dart';
 class CalendarExample extends PolymerElement {
   @observable CalendarEvent selectedevent;
   
-  CalendarExample.created() : super.created();
+  CalendarExample.created() : super.created() {
+    onPropertyChange(this, #selectedevent, (){
+      print('detected selected event changed.');
+    });
+  }
 }

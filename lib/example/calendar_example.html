@@ -3,6 +3,12 @@
   <template>
     Lorem ipsum.
     <tapo-calendar-calendarview id="calendarview" selectedevent="{{ selectedevent }}"></tapo-calendar-calendarview>
+    <template if="{{ selectedevent == null }}">
+      No event selected.
+    </template>
+    <template if="{{ selectedevent != null }}">
+      A event was selected.
+    </template>
   </template>
   <script type="application/dart" src="calendar_example.dart"></script>
 </polymer-element>
