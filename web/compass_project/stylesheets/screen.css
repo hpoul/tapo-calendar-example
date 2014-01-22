@@ -68,7 +68,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* Must be included by calling script. */
-/* line 3, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 5, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview {
   /******************
      Events ...
@@ -300,26 +300,39 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   /* the following style is not supported in opera.. maybe we should use the above image? */
   cursor: not-allowed;
 }
-/* line 7, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 9, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+.tapo-calendar-calendarview.inzoomanimation {
+  overflow-y: hidden;
+}
+/* line 12, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+.tapo-calendar-calendarview .calendarview-wrapper {
+  position: relative;
+}
+/* line 15, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+.tapo-calendar-calendarview.inzoomanimation .calendarview-wrapper {
+  position: relative;
+  transition: top 1s;
+}
+/* line 20, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .cal-wrapper {
   overflow: hidden;
   position: relative;
 }
-/* line 12, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 25, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .cal-timegrid-wrapper {
   position: relative;
   /*top: 1px;*/
 }
-/* line 16, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 29, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .cal-timegrid {
   position: absolute;
   width: 100%;
 }
-/* line 20, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 33, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .placeholder-cell {
   width: 60px;
 }
-/* line 24, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 37, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .cal-table {
   border-collapse: collapse;
   border: 0px;
@@ -328,54 +341,54 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-size: 8pt;
   line-height: normal;
 }
-/* line 35, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 48, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .cal-table tr {
   vertical-align: top;
 }
-/* line 41, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 54, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .cal-timegrid-hour,
 .tapo-calendar-calendarview .cal-timelabel-wrapper,
 .tapo-calendar-calendarview .cal-timelabel {
   border-top: 1px solid #ccc;
 }
-/* line 44, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 57, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .cal-timegrid-hour-half {
   border-bottom: 1px dashed #ccc;
 }
-/* line 51, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 64, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .cal-timegrid-hour-quarter,
 .tapo-calendar-calendarview .cal-timegrid-five-minute,
 .tapo-calendar-calendarview .cal-timegrid-minute-five,
 .tapo-calendar-calendarview .cal-timegrid-minute {
   border-bottom: 1px dotted #ddd;
 }
-/* line 54, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 67, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .cal-timelabel {
   text-align: right;
   color: #888;
   padding-right: 5px;
 }
-/* line 61, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 74, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .cal-timegrid-hour, .tapo-calendar-calendarview .cal-timelabel-wrapper, .tapo-calendar-calendarview .cal-timelabel, .tapo-calendar-calendarview .cal-timegrid-hour-half,
 .tapo-calendar-calendarview .cal-timegrid-minute-five, .tapo-calendar-calendarview .cal-timegrid-minute, .tapo-calendar-calendarview .cal-eventlistwrapper, .tapo-calendar-calendarview .cal-event, .tapo-calendar-calendarview .cal-timegrid-five-minute {
   transition: height 1s, top 1s;
 }
-/* line 66, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 79, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .cal-event.resizing, .tapo-calendar-calendarview .cal-event.moving {
   transition: none;
 }
-/* line 70, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 83, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .cal-event .delete-inline-wrapper {
   float: right;
 }
-/* line 73, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 86, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .cal-event .delete-inline {
   background-image: url('data:image/gif;base64,R0lGODlhDAAMAKU0AObm5vLy8vX19O3t7d3d3UdHR3x8fO3t7ISEhNfX2OPj4lxcXNjY2NjX2PDv8FBQUHJycunq6enq6urq6fT09EtLS+/v8PX29vLy8/Dw8N3c3Hd3d+Li49zd3IaGhvX09NfX1+rp6vX09djY19jX193d3EJCQuzs7VZWVtfY14CAgOPi4urq6ubm521tbWFhYWdnZ/b29n19fbu7u////////////////////////////////////////////////yH5BAEAAD8ALAAAAAAMAAwAAAYiwJ9wSCwaiyYTMblk/pLKJjSKhB6fVuPUOcxmhVzsdTwOAgA7');
   width: 12px;
   height: 12px;
   display: inline-block;
 }
-/* line 114, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 127, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .zoom-overviewday {
   /*
   .cal-timegrid-hour-quarter {
@@ -389,26 +402,26 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   }
   */
 }
-/* line 81, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 94, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .zoom-overviewday .cal-timegrid-hour, .tapo-calendar-calendarview .zoom-overviewday .cal-timelabel-wrapper, .tapo-calendar-calendarview .zoom-overviewday .cal-timelabel {
   height: 35px;
 }
-/* line 84, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 97, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .zoom-overviewday .cal-timegrid-hour-half {
   height: 17px;
 }
-/* line 98, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 111, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .zoom-overviewday .cal-timegrid-five-minute {
   opacity: 0;
   height: 2px;
 }
-/* line 107, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 120, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .zoom-overviewday .cal-eventlistwrapper {
   position: relative;
   height: 864px;
   cursor: pointer;
 }
-/* line 117, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 130, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .zoom-day {
   /*
   .cal-timegrid-hour-quarter {
@@ -422,26 +435,26 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   }
   */
 }
-/* line 81, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 94, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .zoom-day .cal-timegrid-hour, .tapo-calendar-calendarview .zoom-day .cal-timelabel-wrapper, .tapo-calendar-calendarview .zoom-day .cal-timelabel {
   height: 59px;
 }
-/* line 84, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 97, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .zoom-day .cal-timegrid-hour-half {
   height: 29px;
 }
-/* line 98, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 111, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .zoom-day .cal-timegrid-five-minute {
   opacity: 0;
   height: 4px;
 }
-/* line 107, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 120, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .zoom-day .cal-eventlistwrapper {
   position: relative;
   height: 1440px;
   cursor: pointer;
 }
-/* line 120, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 133, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .zoom-quarter-hour {
   /*
   .cal-timegrid-hour-quarter {
@@ -455,26 +468,26 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   }
   */
 }
-/* line 81, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 94, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .zoom-quarter-hour .cal-timegrid-hour, .tapo-calendar-calendarview .zoom-quarter-hour .cal-timelabel-wrapper, .tapo-calendar-calendarview .zoom-quarter-hour .cal-timelabel {
   height: 239px;
 }
-/* line 84, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 97, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .zoom-quarter-hour .cal-timegrid-hour-half {
   height: 119px;
 }
-/* line 98, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 111, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .zoom-quarter-hour .cal-timegrid-five-minute {
   opacity: 0;
   height: 19px;
 }
-/* line 107, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 120, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .zoom-quarter-hour .cal-eventlistwrapper {
   position: relative;
   height: 5760px;
   cursor: pointer;
 }
-/* line 123, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 136, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .zoom-five-minutes {
   /*
   .cal-timegrid-hour-quarter {
@@ -488,26 +501,26 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   }
   */
 }
-/* line 81, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 94, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .zoom-five-minutes .cal-timegrid-hour, .tapo-calendar-calendarview .zoom-five-minutes .cal-timelabel-wrapper, .tapo-calendar-calendarview .zoom-five-minutes .cal-timelabel {
   height: 959px;
 }
-/* line 84, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 97, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .zoom-five-minutes .cal-timegrid-hour-half {
   height: 479px;
 }
-/* line 98, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 111, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .zoom-five-minutes .cal-timegrid-five-minute {
   height: 79px;
   opacity: 1;
 }
-/* line 107, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 120, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .zoom-five-minutes .cal-eventlistwrapper {
   position: relative;
   height: 23040px;
   cursor: pointer;
 }
-/* line 126, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 139, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .zoom-minute {
   /*
   .cal-timegrid-hour-quarter {
@@ -521,20 +534,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   }
   */
 }
-/* line 81, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 94, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .zoom-minute .cal-timegrid-hour, .tapo-calendar-calendarview .zoom-minute .cal-timelabel-wrapper, .tapo-calendar-calendarview .zoom-minute .cal-timelabel {
   height: 3839px;
 }
-/* line 84, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 97, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .zoom-minute .cal-timegrid-hour-half {
   height: 1919px;
 }
-/* line 98, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 111, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .zoom-minute .cal-timegrid-five-minute {
   height: 319px;
   opacity: 1;
 }
-/* line 107, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
+/* line 120, ../../../../tapo_calendar/web/calendar-sass/sass/_calendarview.scss */
 .tapo-calendar-calendarview .zoom-minute .cal-eventlistwrapper {
   position: relative;
   height: 92160px;

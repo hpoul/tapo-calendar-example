@@ -3,7 +3,7 @@ description: A sample Polymer application
 dependencies:
     polymer: ">0.9.2 <1.0.0"
     tapo_calendar:
-      git: https://github.com/hpoul/tapo-calendar.git
+      path: ../tapo_calendar
 transformers:
 - polymer:
     entry_points: web/tapo_calendar_example.html

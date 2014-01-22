@@ -79,10 +79,9 @@ packages:
     version: "0.9.1"
   tapo_calendar:
     description:
-      ref: null
-      resolved-ref: e0217814bc0ba4955894b1bcfadd93f6a3fe6831
-      url: "https://github.com/hpoul/tapo-calendar.git"
-    source: git
+      path: "../tapo_calendar"
+      relative: true
+    source: path
     version: "0.0.1+2"
   template_binding:
     description: template_binding

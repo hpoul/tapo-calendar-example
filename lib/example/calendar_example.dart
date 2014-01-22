@@ -1,5 +1,6 @@
 library calendar_example;
 
+import 'dart:html';
 import 'package:polymer/polymer.dart';
 import 'package:tapo_calendar/calendarview/calendarview.dart';
 
@@ -11,5 +12,15 @@ class CalendarExample extends PolymerElement {
     onPropertyChange(this, #selectedevent, (){
       print('detected selected event changed.');
     });
+  }
+  
+  CalendarView get _calendarView => $['calendarview'];
+  
+  zoomInClicked(Event event, var detail, Node target) {
+    print("zoomInClicked.");
+    _calendarView.zoomIn();
+  }
+  zoomOutClicked(Event event, var detail, Node target) {
+    _calendarView.zoomOut();
   }
 }
