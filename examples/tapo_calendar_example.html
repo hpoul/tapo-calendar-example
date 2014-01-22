@@ -1,0 +1,62 @@
+<!DOCTYPE html><html><head><script src="packages/shadow_dom/shadow_dom.debug.js"></script>
+<script src="packages/custom_element/custom-elements.debug.js"></script>
+<script src="packages/browser/interop.js"></script>
+
+    <meta charset="utf-8">
+    <title>Sample app</title>
+    <link href="compass_project/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <link href="compass_project/stylesheets/print.css" media="print" rel="stylesheet" type="text/css">
+    <!--[if IE]>
+        <link href="compass_project/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    
+    <!-- import the click-counter -->
+    
+    <script src="tapo_calendar_example.html_bootstrap.dart.js"></script>
+    
+  </head>
+  <body><polymer-element name="tapo-calendar-calendarview">
+  <template>
+    <div class="tapo-calendar-calendarview">
+      <div class="calendarview-wrapper zoom-day"></div>
+    </div>
+    
+  </template>
+  
+      <!-- script type="application/dart">
+      import 'package:tapo_calendar/calendarview/calendarview.dart';
+      import 'package:polymer/polymer.dart';
+      
+      @initMethod _init() {
+        Polymer.register('tapo-calendar-calendarview', CalendarView);
+      }
+      </script -->
+</polymer-element>
+<polymer-element name="calendar-example">
+  <template>
+    <p>
+      <input type="button" value="Zoom In" on-click="{{ zoomInClicked }}"> 
+      <input type="button" value="Zoom Out" on-click="{{ zoomOutClicked }}">
+    </p>
+    <tapo-calendar-calendarview id="calendarview" selectedevent="{{ selectedevent }}"></tapo-calendar-calendarview>
+    <template if="{{ selectedevent == null }}">
+      No event selected.
+    </template>
+    <template if="{{ selectedevent != null }}">
+      A event was selected.
+    </template>
+  </template>
+  
+</polymer-element>
+
+    <h1>Tapo calendar example</h1>
+    
+    <p>Hello world from Dart!</p>
+    
+    <div id="sample_container_id">
+      <calendar-example></calendar-example>
+    </div>
+
+  
+
+</body></html>
