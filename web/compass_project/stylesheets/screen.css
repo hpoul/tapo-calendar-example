@@ -831,21 +831,23 @@ input.cal-event-label {
   cursor: not-allowed;
 }
 
-/* line 1, ../../../../tapo_calendar/web/calendar-sass/sass/_annotationstyles.scss */
+/* line 3, ../../../../tapo_calendar/web/calendar-sass/sass/_annotationstyles.scss */
 .cal-annotation {
   position: absolute;
   left: -55px;
   top: -7px;
   padding-left: 1px;
   padding-right: 4px;
+  padding-top: 15px;
+  margin-top: -15px;
   transition: top 1s;
 }
-
-/* line 10, ../../../../tapo_calendar/web/calendar-sass/sass/_annotationstyles.scss */
+/* line 14, ../../../../tapo_calendar/web/calendar-sass/sass/_annotationstyles.scss */
 .cal-annotation .indicator {
-  width: 10px;
-  height: 10px;
-  top: -4px;
+  cursor: pointer;
+  width: 5px;
+  height: 8px;
+  top: -3px;
   border: 2px solid orange;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -858,8 +860,22 @@ input.cal-event-label {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+/* line 27, ../../../../tapo_calendar/web/calendar-sass/sass/_annotationstyles.scss */
+.cal-annotation .cal-tooltip {
+  cursor: auto;
+  z-index: 2;
+  position: absolute;
+  display: none;
+  background-color: white;
+  top: 0px;
+  left: 25px;
+  padding: 7px;
+  border-radius: 5px;
+  border: 2px solid orange;
+  width: 40em;
+}
 
-/* line 20, ../../../../tapo_calendar/web/calendar-sass/sass/_annotationstyles.scss */
+/* line 42, ../../../../tapo_calendar/web/calendar-sass/sass/_annotationstyles.scss */
 .cal-annotation-duration .indicator {
   top: 0px;
   width: 5px;
@@ -867,28 +883,34 @@ input.cal-event-label {
   transition: height 1s;
 }
 
-/* line 26, ../../../../tapo_calendar/web/calendar-sass/sass/_annotationstyles.scss */
-.cal-annotation:hover .cal-tooltip {
-  display: block;
+/* line 48, ../../../../tapo_calendar/web/calendar-sass/sass/_annotationstyles.scss */
+.cal-annotation-action {
+  text-decoration: none;
+  margin-left: 1em;
 }
 
-/* line 29, ../../../../tapo_calendar/web/calendar-sass/sass/_annotationstyles.scss */
-.cal-annotation:hover .indicator {
+/* line 52, ../../../../tapo_calendar/web/calendar-sass/sass/_annotationstyles.scss */
+.cal-annotation:hover, .cal-annotation.cal-annotation-active {
+  width: 40em;
+  height: 3em;
+}
+/* line 57, ../../../../tapo_calendar/web/calendar-sass/sass/_annotationstyles.scss */
+.cal-annotation:hover .cal-tooltip, .cal-annotation.cal-annotation-active .cal-tooltip {
+  display: block;
+}
+/* line 60, ../../../../tapo_calendar/web/calendar-sass/sass/_annotationstyles.scss */
+.cal-annotation:hover .indicator, .cal-annotation.cal-annotation-active .indicator {
   border-color: #ffc966;
 }
 
-/* line 32, ../../../../tapo_calendar/web/calendar-sass/sass/_annotationstyles.scss */
-.cal-annotation .cal-tooltip {
+/* line 65, ../../../../tapo_calendar/web/calendar-sass/sass/_annotationstyles.scss */
+.cal-annotation.cal-annotation-active .indicator {
+  border-color: #00e600;
+}
+/* line 68, ../../../../tapo_calendar/web/calendar-sass/sass/_annotationstyles.scss */
+.cal-annotation.cal-annotation-active .cal-tooltip {
+  border-color: #00e600;
   z-index: 1;
-  position: absolute;
-  display: none;
-  background-color: white;
-  top: -5px;
-  left: 25px;
-  padding: 7px;
-  border-radius: 5px;
-  border: 2px solid orange;
-  width: 40em;
 }
 
 /* line 14, ../sass/screen.scss */

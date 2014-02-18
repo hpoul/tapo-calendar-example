@@ -5,7 +5,7 @@
       <input type="button" value="Zoom In" on-click="{{ zoomInClicked }}" /> 
       <input type="button" value="Zoom Out" on-click="{{ zoomOutClicked }}" />
     </p>
-    <tapo-calendar-calendarview id="calendarview" selectedevent="{{ selectedevent }}"></tapo-calendar-calendarview>
+    <tapo-calendar-calendarview id="calendarview" selectedevent="{{ selectedevent }}" on-annotationactionselected="{{ annotationActionSelected }}"></tapo-calendar-calendarview>
     <template if="{{ selectedevent == null }}">
       No event selected.
     </template>
