@@ -78,7 +78,7 @@ packages:
       path: "../tapo_calendar"
       relative: true
     source: path
-    version: "0.0.2"
+    version: "0.0.3-dev.1"
   template_binding:
     description: template_binding
     source: hosted
