@@ -15,8 +15,9 @@ class CalendarExample extends PolymerElement {
     });
   }
 
-  void enteredView() {
-    super.enteredView();
+  @override
+  void attached() {
+    super.attached();
     // wait a second before populating calendar
     new Timer(const Duration(seconds: 1), (){
       var start1 = new DateTime.now().subtract(const Duration(hours:2));
