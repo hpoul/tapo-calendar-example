@@ -1,16 +1,18 @@
-<html><head>
     <link rel="import" href="../calendarview/calendarview.html">
-  </head>
-  <body>
+    <link rel="import" href="../../../packages/polymer/polymer.html">
     <polymer-element name="tapo-calendar-eventlist">
       <template>
         <button on-click="{{ clickedZoomIn }}">Zoom In</button>
         <button on-click="{{ clickedZoomOut }}">Zoom Out</button>
         <tapo-calendar-calendarview></tapo-calendar-calendarview>
       </template>
-      <script type="application/dart" src="eventlist.html.0.dart"></script>
+      <script type="application/dart">
+      import 'package:tapo_calendar/eventlist/eventlist.dart';
+      import 'package:polymer/polymer.dart';
+      
+      @initMethod _init() {
+        Polymer.register('tapo-calendar-eventlist', EventListElement);
+      }
+      </script>
       <!-- script type="application/dart" src="eventlist.dart"></script -->
     </polymer-element>
-  
-
-</body></html>
