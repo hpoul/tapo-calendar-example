@@ -1,7 +1,7 @@
 name: tapo_calendar_example
 description: A sample Polymer application
 dependencies:
-    polymer: ">=0.11.0 <0.12.0"
+    polymer: ">=0.11.0 <0.13.0"
     tapo_calendar:
       path: ../tapo_calendar
 transformers:
