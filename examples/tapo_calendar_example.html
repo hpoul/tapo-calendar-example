@@ -1,19 +1,7 @@
 <!DOCTYPE html><html><head>
     <meta charset="utf-8">
     <title>Sample app</title>
-    
-    
-    <!--[if IE]>
-        <link href="compass_project/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
-    <![endif]-->
-    
-    <!-- import the click-counter -->
-    
-    
-    
-    
-  </head>
-  <body><style>/* Welcome to Compass.
+    <style media="screen, projection" type="text/css">/* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
@@ -1880,22 +1868,22 @@ body /deep/ p {
   line-height: 1.5em;
   max-width: 60em;
 }
-</style><style>/* Welcome to Compass. Use this file to define print styles.
+</style>
+    <style media="print" type="text/css">/* Welcome to Compass. Use this file to define print styles.
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
-</style><script src="packages/web_components/platform.js"></script><script src="packages/web_components/dart_support.js"></script>
-
-
-
-
-<!-- unminfied for debugging:
-<link rel="import" href="src/js/polymer/layout.html">
-<script src="src/js/polymer/polymer.concat.js"></script>
--->
-
-
-
-<style shim-shadowdom="">
+</style>
+    <!--[if IE]>
+        <link href="compass_project/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    
+    <!-- import the click-counter -->
+    <script src="packages/web_components/platform.js"></script>
+    <script src="packages/web_components/dart_support.js"></script>
+    
+    
+  </head>
+  <body><div hidden=""><style shim-shadowdom="">
 /*******************************
           Flex Layout
 *******************************/
@@ -1949,15 +1937,23 @@ html /deep/ [layout][wrap-reverse] {
 }
 
 html /deep/ [flex] {
-  -ms-flex: 1;
+  -ms-flex: 1 1 0.000000001px;
   -webkit-flex: 1;
   flex: 1;
+  -webkit-flex-basis: 0.000000001px;
+  flex-basis: 0.000000001px;
+}
+
+html /deep/ [vertical][layout] > [flex][auto-vertical], html /deep/ [vertical][layout]::shadow [flex][auto-vertical] {
+  -ms-flex: 1 1 auto;
+  -webkit-flex-basis: auto;
+  flex-basis: auto;
 }
 
 html /deep/ [flex][auto] {
   -ms-flex: 1 1 auto;
-  -webkit-flex: 1 1 auto;
-  flex: 1 1 auto;
+  -webkit-flex-basis: auto;
+  flex-basis: auto;
 }
 
 html /deep/ [flex][none] {
@@ -2046,7 +2042,7 @@ html /deep/ [layout][start] {
   align-items: flex-start;
 }
 
-html /deep/ [layout][center] {
+html /deep/ [layout][center], html /deep/ [layout][center-center] {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
@@ -2066,7 +2062,7 @@ html /deep/ [layout][start-justified] {
   justify-content: flex-start;
 }
 
-html /deep/ [layout][center-justified] {
+html /deep/ [layout][center-justified], html /deep/ [layout][center-center] {
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
@@ -2079,7 +2075,7 @@ html /deep/ [layout][end-justified] {
 }
 
 html /deep/ [layout][around-justified] {
-  -ms-flex-pack: around;
+  -ms-flex-pack: distribute;
   -webkit-justify-content: space-around;
   justify-content: space-around;
 }
@@ -2164,10 +2160,21 @@ html /deep/ [segment], html /deep/ segment {
   border-radius: 5px 5px 5px 5px;
 }
 
-</style><script src="packages/polymer/src/js/polymer/polymer.js"></script><script>
+</style>
+
+<script src="packages/polymer/src/js/polymer/polymer.js"></script>
+
+<script>
 // TODO(sigmund): remove this script tag (dartbug.com/19650). This empty
 // script tag is necessary to work around a bug in Chrome 36.
 </script>
+
+<!-- unminified for debugging:
+<link rel="import" href="src/js/polymer/layout.html">
+<script src="src/js/polymer/polymer.concat.js"></script>
+-->
+
+
 <polymer-element name="tapo-calendar-calendarview">
   <template>
     <div class="tapo-calendar-calendarview">
@@ -2177,6 +2184,7 @@ html /deep/ [segment], html /deep/ segment {
   </template>
   
 </polymer-element>
+
 <polymer-element name="calendar-example">
   <template>
     <p>
@@ -2193,7 +2201,7 @@ html /deep/ [segment], html /deep/ segment {
   </template>
   
 </polymer-element>
-
+</div>
     <h1>TaPo Calendar Example</h1>
     
     <p>This is a simple example of the calendar component, based on polymer.dart. 
